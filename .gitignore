@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 #
-/src/data.js
-/src/exemple-data.js
+./src/data.js
+./src/exemple-data.js
