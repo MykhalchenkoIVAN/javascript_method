@@ -1,0 +1,48 @@
+.header{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 100%;
+    margin-bottom: 1.6rem;
+
+
+    --min-width: 32rem;
+    --max-width: 144rem;
+
+    display: grid;
+    --flap: minmax(1.6rem, 1fr);
+    --content: minmax(var(--min-width), var(--max-width));
+  
+    display: grid;
+    grid-template-columns:
+      var(--flap)
+      var(--content)
+      var(--flap);
+
+
+}
+.header__title{
+    grid-column: 2/3;
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+}
+
+.header__notation{
+    display: grid;
+    grid-column: 2/3;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+}
+.header__notation-item{
+    display: flex;
+    color: antiquewhite;
+    align-items: center;
+    font-size: 3rem;
+    
+}
+.header__type{
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    margin-right: 2rem;
+}

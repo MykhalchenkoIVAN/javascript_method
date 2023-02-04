@@ -1,0 +1,26 @@
+.card{
+width: 100%;
+padding-top: 0.5rem;
+z-index: 2;
+
+}
+.card__content{
+    border: 0.3rem black solid;
+}
+.card__title{
+    font-size: 2.1rem;
+    margin-left: 1rem;
+    color: white;
+    background-color: black;
+    margin: 0;
+    width: 30%;
+}
+.properties__title, .methods__title,.card__title{
+    text-align: start;
+}
+.properties__title, .methods__title{
+    color: #8e8e8e;
+    margin: 0;
+    font-size: 1.8rem;
+    background-color: #323233;
+}

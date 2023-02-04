@@ -1,0 +1,88 @@
+.modal{
+    position: fixed;
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    z-index: 3;
+
+}
+.modal__wrapper{
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.714);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+   
+}
+
+.modal__window{
+    position: absolute;
+    background-color: #252526;
+    padding: 1rem 2rem;
+    z-index: 3;
+    margin: 0 auto;
+    max-width: 97%;
+    padding-bottom: 5rem;
+    
+
+}
+.modal__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 1.4rem;
+    margin-bottom: 2rem;
+}
+.modal__title{
+    color: #dcdc8b;
+    display: flex;
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-right: 3rem;
+
+}
+.modal__button-cancel{
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute; 
+    right: 0;
+    font-size: 3rem;
+    color: rgba(255, 0, 0, 0.532);
+
+    border: none;
+    background-color: transparent;
+}
+.modal__body{
+
+}
+.modal__type{
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+
+}
+.modal__code{
+    font-size: 1.6rem;
+
+}
+.modal__description{
+    color: aliceblue;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+@media(max-width: 1000px){
+    .modal__wrapper{
+    }
+    .modal__window{
+        padding: 0.5rem 1rem;
+    }
+    .hljs{
+        padding: 1rem;
+    }
+}

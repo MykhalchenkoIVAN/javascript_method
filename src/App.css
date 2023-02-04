@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app__wrapper{
+  width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #252526;
+  position: relative;
+
+  --min-width: 32rem;
+  --max-width: 144rem;
+
+  --flap: minmax(1.6rem, 1fr);
+  --content: minmax(var(--min-width), var(--max-width));
+
+  display: grid;
+  grid-template-columns:
+    var(--flap)
+    var(--content)
+    var(--flap);
+
+  grid-template-rows: 1.6rem minmax(min-content, max-content) 1fr 1.6rem;  
+
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #1e1e1e;
+
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media(max-width: 1000px){
+  .app__wrapper{
+    --flap: minmax(0.3rem, 1fr);
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }

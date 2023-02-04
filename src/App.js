@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import Card from './components/Card';
 import './App.css';
+import data from "./data"
+import ModalWindow from "./components/ModalWindow";
+import React, { useState } from 'react';
+import Header from './components/Header';
 
 function App() {
+
+  let initialState = data;
+
+  const [showModal, setShowModal] = useState(false)
+  const [dataModal, setDataModal] = useState({
+    name: "",
+    class: "",
+    description: "",
+    code: "",
+  })
+
+  const onOpenModal = (e) => {
+    setDataModal(e)
+    setShowModal(true)
+  }
+
+  const onCloseModal = () => {
+    setShowModal(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    <div className='app__wrapper'>
+      <Header />
+      <div className='app'>
+        {initialState.map(arr => (
+          <Card
+            key={Math.random()}
+            props={arr}
+            onOpenModal={onOpenModal}
+          />))}
+      </div>
+      <ModalWindow
+        state={showModal}
+        name={dataModal.name}
+        class={dataModal.class}
+        code={dataModal.code}
+        description={dataModal.description}
+        onCloseModal={onCloseModal} /></div>
+
+  )
 }
 
 export default App;
