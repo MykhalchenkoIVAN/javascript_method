@@ -1,17 +1,26 @@
 .modal{
     position: fixed;
-    grid-column: 2/3;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: scroll;
     z-index: 3;
 
+    --min-width: 25rem;
+    --max-width: 140rem;
+  
+    --flap: minmax(0.5rem, 1fr);
+    --content: minmax(var(--min-width), var(--max-width));
+  
+    display: grid;
+    grid-template-columns:
+      var(--flap)
+      var(--content)
+      var(--flap);
+
+    grid-template-rows: 1fr minmax(min-content, max-content) 1fr;
 }
 .modal__wrapper{
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.714);
     position: fixed;
     top: 0;
@@ -21,17 +30,16 @@
 }
 
 .modal__window{
-    position: absolute;
     background-color: #252526;
-    padding: 1rem 2rem;
+    padding: 1rem 0.5rem;
     z-index: 3;
-    margin: 0 auto;
-    max-width: 97%;
     padding-bottom: 5rem;
+    grid-column: 2/3;
+    grid-row: 2/3;
     
 
-}
-.modal__header{
+} 
+.modal__header{ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,22 +58,20 @@
 .modal__button-cancel{
     width: 2.4rem;
     height: 2.4rem;
-    position: absolute; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 0;
     font-size: 3rem;
     color: rgba(255, 0, 0, 0.532);
-
     border: none;
     background-color: transparent;
-}
-.modal__body{
-
 }
 .modal__type{
     width: 3rem;
     height: 3rem;
     align-items: center;
-
 }
 .modal__code{
     font-size: 1.6rem;
@@ -75,13 +81,9 @@
     color: aliceblue;
     font-size: 1.6rem;
     margin-bottom: 2rem;
+    margin-left: 1.6rem;
 }
 @media(max-width: 1000px){
-    .modal__wrapper{
-    }
-    .modal__window{
-        padding: 0.5rem 1rem;
-    }
     .hljs{
         padding: 1rem;
     }

@@ -1,5 +1,6 @@
 .card{
 width: 100%;
+height: max-content;
 padding-top: 0.5rem;
 z-index: 2;
 
@@ -13,6 +14,7 @@ z-index: 2;
     color: white;
     background-color: black;
     margin: 0;
+    padding-left: 0.5rem;
     width: 30%;
 }
 .properties__title, .methods__title,.card__title{
@@ -23,4 +25,5 @@ z-index: 2;
     margin: 0;
     font-size: 1.8rem;
     background-color: #323233;
+    padding-left: 0.5rem;
 }

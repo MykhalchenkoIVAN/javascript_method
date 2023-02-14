@@ -7,7 +7,7 @@
   --min-width: 32rem;
   --max-width: 144rem;
 
-  --flap: minmax(1.6rem, 1fr);
+  --flap: minmax(1rem, 1fr);
   --content: minmax(var(--min-width), var(--max-width));
 
   display: grid;
@@ -16,24 +16,35 @@
     var(--content)
     var(--flap);
 
-  grid-template-rows: 1.6rem minmax(min-content, max-content) 1fr 1.6rem;  
-
+  grid-template-rows: 1.6rem minmax(min-content, max-content) minmax(min-content, max-content)  minmax(min-content, max-content) minmax(min-content, max-content) 1.6rem;  
   z-index: 1;
 }
 
 .app {
-  width: 100%;
-  height: 100%;
   text-align: center;
   background-color: #1e1e1e;
-
+  padding: 1.5rem;
   grid-column: 2/3;
-  grid-row: 3/4;
+  grid-row: 4/5;
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: 100%;
+  gap: 1.6rem;
+  grid-auto-rows: 1.6rem;
 }
 
+@media(min-width: 640px){
+  .app{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media(min-width: 1098px){
+  .app{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
 
 @media(max-width: 1000px){
   .app__wrapper{

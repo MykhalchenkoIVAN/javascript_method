@@ -1,9 +1,13 @@
 import "./Header.css"
 import "./Item.css"
 
-const Header = () => {
+const Header = (props) => {
+    const onGoHomePageLisener = () => {
+        props.onGoHomePage()
+    }
+
     return (<div className="header">
-        <h1 className="header__title">.Шпаргалка()</h1>
+        <h1 className="header__title" onClick={onGoHomePageLisener}><span>JS</span>.Шпаргалка()</h1>
         <div className="header__notation">
             <div className="header__notation-item"><div className={`type__object header__type`}>{"o"}</div>object</div>
             <div className="header__notation-item"><div className={`type__string header__type`}>{"s"}</div>string</div>
@@ -16,6 +20,7 @@ const Header = () => {
             <div className="header__notation-item"><div className={`type__function header__type`}>{"f"}</div>function</div>
             <div className="header__notation-item"><div className={`type__undefined header__type`}>{"u"}</div>undefined</div>
             <div className="header__notation-item"><div className={`type__promise header__type`}>{"p"}</div>promise</div>
+            <div className="header__notation-item"><div className={`type__map header__type`}>{"m"}</div>map</div>
         </div>
     </div>)
 }

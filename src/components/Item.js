@@ -3,7 +3,6 @@ import "./Item.css"
 
 const Item = (props) => {
     const itemHandler = (event) => {
-
         props.onModalLisener(props)
     }
 

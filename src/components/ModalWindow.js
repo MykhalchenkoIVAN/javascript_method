@@ -7,7 +7,7 @@ import "./code-react-highlight.css";
 
 
 const ModalWindow = (props) => {
-    const topPosition = (window.screen.height / 14)
+
     const closeModal = () => {
         props.onCloseModal()
     }
@@ -16,9 +16,7 @@ const ModalWindow = (props) => {
         <>
             {props.state && <div className='modal'>
                 <div className="modal__wrapper " onClick={closeModal}></div>
-                <div className='modal__window' style={{
-                    top: topPosition,
-                }}>
+                <div className='modal__window'>
                     <div className='modal__header'>
                         <div className='modal__title'><div className={`type__${props.class} modal__type`}>{props.class.slice(0, 1)}</div>{props.name}</div>
                         <button className='modal__button-cancel' onClick={closeModal}>&#215;</button>
@@ -33,7 +31,6 @@ const ModalWindow = (props) => {
                     </div>
                 </div>
             </div>
-
             }
         </>
     )

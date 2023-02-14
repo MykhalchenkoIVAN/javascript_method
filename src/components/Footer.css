@@ -1,0 +1,20 @@
+.footer{
+    grid-column: 2/3;
+    grid-row: 5/6;
+    background-color: #252526;
+    text-align: center;
+    padding: 1rem;
+}
+.footer__span{
+    color: rgb(68, 72, 75);
+    font-size: 1.6rem;
+}
+.footer__span a{
+    color: rgba(112, 112, 74, 0.864);
+    font-size: 1.8rem;
+    text-decoration: none;
+    
+}
+.footer__span a:hover{
+    color: rgb(158, 158, 92);
+}

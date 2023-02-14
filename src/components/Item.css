@@ -15,6 +15,7 @@
     background-color: beige;
 }
 .item__text{
+    font-size: 1.6rem;
     color: #dcdc8b;
     padding-left: 0.5rem;
     font-weight: 600;
@@ -36,7 +37,8 @@
 .type__regular-expresion,
 .type__function,
 .type__undefined,
-.type__promise{
+.type__promise,
+.type__map{
     width: 2rem;
     border-radius: 50%;
     margin-left: 1rem;
@@ -82,4 +84,7 @@
 }
 .type__promise{
     background-color: #631c1c;
+}
+.type__map{
+    background-color: #07c917; 
 }
