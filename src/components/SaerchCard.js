@@ -1,17 +1,18 @@
-import "./SearchCard.css"
+import styles from './Card.module.css'
 import Item from "./Item";
 
 
 const SearchCard = (props) => {
     const onModalLisener = (e) => {
         props.onOpenModal(e)
+        props.onOpenOverlay(true)
     }
 
     return (
 
-        < div className="search__card" >
-            <h2 className="search__card-title">{props.props.type}</h2>
-            <div className="search__card-content">
+        < div className={styles.card}>
+            <h2 className={styles.card__title}>{props.props.type}</h2>
+            <div className={styles.card__content}>
                 <Item key={Math.random()}
                     name={props.props.name}
                     class={props.props.class}

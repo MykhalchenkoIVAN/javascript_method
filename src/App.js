@@ -4,15 +4,14 @@ import Footer from './components/Footer';
 import Search from './components/Search';
 import SearchCard from './components/SaerchCard';
 import './App.css';
-import data from "./data"
 import ModalWindow from "./components/ModalWindow";
 import React, { useEffect, useState, useRef } from 'react';
 import ReactDOM from 'react-dom'
+import json from './data.json'
 
 
 
 function App() {
-
 
   // a function that calculates the size of cards
   const wrappertRef = useRef(null);
@@ -38,10 +37,10 @@ function App() {
   }, [resizeElements])
 
   // state app
-  const [initialState, setInitState] = useState(data)
+  const [initialState, setInitState] = useState(json)
   const onGoHomePage = (e) => {
     setSearchValue('')
-    setInitState(data)
+    setInitState(json)
   }
   // state modal window
   const [showModal, setShowModal] = useState(false);
@@ -61,7 +60,7 @@ function App() {
       setInitState(false)
     } else {
       setSearchValue('')
-      setInitState(data)
+      setInitState(json)
     }
   }
 
@@ -88,7 +87,7 @@ function App() {
     <div className='app__wrapper'>
       <Header onGoHomePage={onGoHomePage} />
       <Search
-        props={data}
+        props={json}
         onFilteredMethod={onFilteredMethod} />
       <div className='app' ref={wrappertRef}>
         {searchValue !== '' ?

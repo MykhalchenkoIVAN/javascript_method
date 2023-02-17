@@ -1,3 +1,4 @@
+@import url('./Helpers/VariableCss.css');
 .item{
     font-size: 1.6rem;
     line-height: 1.7rem;
@@ -7,26 +8,27 @@
     margin-bottom: 0.3rem;
     margin-top:0.4rem;
 }
-.item__acrive{
-    height: 500px;
-}
 .item:hover{
     color: black;
     background-color: beige;
 }
 .item__text{
     font-size: 1.6rem;
-    color: #dcdc8b;
+    color: var(--text);
     padding-left: 0.5rem;
     font-weight: 600;
 }
 .item__text:hover{
-    color: black;
+    color: var(--black);
 }
 .item__span{
-    color: rgba(96, 96, 93, 0.81);
+    color: var(--notice-text);
 }
-
+.modalwindow{
+    height: 100px;
+    width: 100px;
+    background-color: var(--black);
+}
 .type__object,
 .type__string,
 .type__number,
@@ -46,45 +48,41 @@
     justify-content: center;
 }
 .type__object{
-    background-color: rgb(71, 71, 198);
+    background-color: var(--object);
 }
 .type__string{
-    background-color: rgb(198, 71, 162);
+    background-color: var(--string);
 }
 .type__number{
-    color: white;
-    background-color: rgb(43, 25, 239);
+    color: var(--number-text);
+    background-color: var(--number);
 }
 .type__nan{
-    color: red;
-    background-color: rgb(108, 97, 223);
+    color: var(--nan-texts);
+    background-color: var(--nan);
 }
 .type__boolean{
-    background-color: #6e1a12;
+    background-color: var(--boolean);
 }
 .type__array{
-    background-color: #73c991;
+    background-color: var(--array);
 }
-.modalwindow{
-    height: 100px;
-    width: 100px;
-    background-color: black;
-}
+
 .type__date{
-    background-color: #7388c9; 
+    background-color: var(--date); 
 }
 .type__regular-expresion{
-    background-color: #b96d11; 
+    background-color: var(--regular-expresion); 
 }
 .type__function{
-    background-color: #b6b0a8;
+    background-color: var(--function);
 }
 .type__undefined{
-    background-color: #555454;
+    background-color: var(--undefined);
 }
 .type__promise{
-    background-color: #631c1c;
+    background-color: var(--promise);
 }
 .type__map{
-    background-color: #07c917; 
+    background-color: var(--map); 
 }

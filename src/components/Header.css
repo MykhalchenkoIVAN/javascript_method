@@ -1,4 +1,4 @@
-
+@import url('./Helpers/VariableCss.css');
 .header{
     grid-column: 2/3;
     grid-row: 2/3;
@@ -25,10 +25,10 @@
     grid-column: 2/3;
     font-size: 4rem;
     text-align: center;
-    color: white;
+    color: var(--white);
 }
 .header__title span{
-    color: #f7df1e;
+    color: var(--header__title-span);
     font-size: 5rem;
     
 }
@@ -40,7 +40,7 @@
 }
 .header__notation-item{
     display: flex;
-    color: antiquewhite;
+    color: var(--header__notation-item);
     align-items: center;
     font-size: 2rem;
     margin: 0.2rem;

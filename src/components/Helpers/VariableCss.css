@@ -1,0 +1,53 @@
+:root{ 
+    --white: #FFFFFF;
+    --black:#000000;
+
+    --overlay-bg: rgba(0, 0, 0, 0.714);
+
+    /* App */
+    --light-bg: #252526;
+    --dark-bg:#1e1e1e;
+
+    /* Header */
+    --header__title-span:#f7df1e;
+    --header__notation-item:antiquewhite;
+
+    /* Search */
+    --search__input-invalid:rgba(255, 0, 0, 0.124);    
+
+    /* Card */
+    --methods__title-bg:#323233; 
+    --methods__title-text:#8e8e8e;
+
+    /* Item */
+    --text:#dcdc8b;
+    --notice-text:rgba(96, 96, 93, 0.81);
+
+    --object:rgb(71, 71, 198);
+    --string:rgb(198, 71, 162);
+    --number:rgb(43, 25, 239);
+    --number-text:#FFFFFF;
+    --nan:rgb(108, 97, 223);
+    --nan-text:red;
+    --boolean:#6e1a12;
+    --array:#73c991;
+    --date:#7388c9;
+    --regular-expresion:#b96d11;
+    --function:#b6b0a8;
+    --undefined:#555454;
+    --promise:#631c1c;
+    --map:#07c917;
+
+    /* Modal window */
+    --modal__title: #dcdc8b;
+    --modal-description:#ffffff85;
+    --modal__button-cancel-red:rgba(255, 0, 0, 0.361) ;
+    --modal__code-header: #323234;
+    --modal__code-header-btn: rgba(255, 255, 255, 0.515);
+
+    /* Footer */
+    --footer-text:rgb(68, 72, 75);
+    --footer-link:rgba(112, 112, 74, 0.864);
+    --footer-link-hover:rgb(158, 158, 92);
+
+}   

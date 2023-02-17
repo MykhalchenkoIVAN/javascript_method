@@ -1,7 +1,8 @@
+@import url('./components/Helpers/VariableCss.css');
 .app__wrapper{
   width: 100%;
   min-height: 100vh;
-  background-color: #252526;
+  background-color: var(--light-bg) ;
   position: relative;
 
   --min-width: 32rem;
@@ -22,7 +23,7 @@
 
 .app {
   text-align: center;
-  background-color: #1e1e1e;
+  background-color: var(--dark-bg);
   padding: 1.5rem;
   grid-column: 2/3;
   grid-row: 4/5;
