@@ -1,0 +1,39 @@
+
+.toggle__theme-btn{
+	width: 2.8rem;
+	height: 2.9rem;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: 0.3s;
+    box-shadow: 
+		0 0 0.4rem 0.4rem rgba(13, 2, 238, 0.5),
+}
+.toggle__theme-btn:hover{
+	transform: scale(1.1);
+}
+.toggle__theme-btn:active{
+	transform: scale(0.8);
+	box-shadow:
+		0 0 0.4rem 0.9rem rgba(61, 53, 225, 0.5),
+		0 0 0.9rem 0.9rem rgba(13, 226, 13, 0.4) inset,
+		0 0.125em 0.125em rgba(0, 0, 0, 0.4);
+}
+
+.toggle__theme-btn svg{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+}
+@media(max-width: 640px){
+    .toggle__theme-btn{
+        grid-column: 3/4;
+        justify-self: end;
+  }
+
+}

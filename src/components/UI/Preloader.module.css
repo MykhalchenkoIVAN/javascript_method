@@ -1,0 +1,99 @@
+@import url('../Helpers/VariableCss.css');
+.preloader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    
+  }
+.loader {
+    width: 7rem;
+    height: 12rem;
+    position: relative;
+    margin: 0 auto;
+    animation: rotate 5s linear infinite;
+  }
+  
+  .loader div {
+    position: absolute;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 0rem;
+    animation: pulse 3s ease-in-out infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      background-color: #FFD700;
+      border-radius: 0.2rem;
+
+    }
+    15%{
+        background-color: #87CEEB;
+    }
+    25%{
+        border-radius: 0.6rem; 
+    }
+
+    30%{
+        background-color: #006400;
+    }
+    50% {
+      transform: scale(2);
+      background-color: #C0C0C0;
+      border-radius: 0.8rem;
+    }
+
+    70%{
+        background-color: #FFA07A;
+    }
+    100% {
+      transform: scale(1);
+      background-color: #FFD700;
+      border-radius: 0rem;
+    }
+  }
+  
+  .loader div:nth-child(1) {
+    top: 0;
+    left: 3rem;
+  }
+  
+  .loader div:nth-child(2) {
+    top: 0;
+    right: 3rem;
+  }
+  
+  .loader div:nth-child(3) {
+    top: 5rem;
+    right: -4rem;
+  }
+  
+  .loader div:nth-child(4) {
+    bottom: 0;
+    right: 3rem;
+  }
+  
+  .loader div:nth-child(5) {
+    bottom: 0;
+    left: 3rem;
+    right: 2rem;
+  }
+  
+  .loader div:nth-child(6) {
+    bottom: 5rem;
+    left: -4rem;
+  }
+  

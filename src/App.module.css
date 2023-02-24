@@ -1,0 +1,54 @@
+@import url('./components/Helpers/VariableCss.css');
+.app__wrapper{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  --min-width: 32rem;
+  --max-width: 144rem;
+
+  --flap: minmax(1rem, 1fr);
+  --content: minmax(var(--min-width), var(--max-width));
+
+  display: grid;
+  grid-template-columns:
+    var(--flap)
+    var(--content)
+    var(--flap);
+
+  grid-template-rows: 1.6rem minmax(min-content, max-content) minmax(min-content, max-content)  minmax(min-content, max-content) minmax(min-content, max-content) 1.6rem;  
+  z-index: 1;
+}
+
+.app {
+  text-align: center;
+  padding: 1.5rem;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1.6rem;
+  grid-auto-rows: 1.6rem;
+
+}
+
+@media(min-width: 640px){
+  .app{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media(min-width: 1098px){
+  .app{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+@media(max-width: 1000px){
+  .app__wrapper{
+    --flap: minmax(0.3rem, 1fr);
+  }
+
+}

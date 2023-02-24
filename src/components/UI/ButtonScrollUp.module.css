@@ -1,0 +1,20 @@
+@import url('../Helpers/VariableCss.css');
+.button{
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+    z-index: 1000;
+    background-image: url('../../svg/arrowup.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 6rem;
+    opacity: 0.2;
+}
+.button:hover{
+    opacity: 1;
+    transform : scale(1.5);
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.5rem;
+}
