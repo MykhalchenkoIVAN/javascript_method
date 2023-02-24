@@ -5,10 +5,7 @@ import CopyIcon from './UI/CopyIcon';
 import React, { useState, useEffect } from 'react';
 import CopyIconOk from './UI/CopyIconOk'
 
-
-
-
-
+import ItemStyles from './Item.module.css'
 const ModalWindow = (props) => {
     let stateModal = props.state
     const [stateBtn, setStateBtn] = useState(stateModal)
@@ -42,7 +39,6 @@ const ModalWindow = (props) => {
             copyCodeToClipboard(code)
         }
     }
-    console.log(defineDeviceType() === 'Desktop');
     // copy mobile clipboard
     const copyText = (code) => {
         const input = document.createElement('textarea');
@@ -64,17 +60,17 @@ const ModalWindow = (props) => {
     return (
         <>
             {props.state && <div className='modal'>
-                <div className="modal__wrapper " onClick={closeModal}></div>
-                <div className='modal__window'>
-                    <button className='modal__button-cancel' onClick={closeModal}>&#215;</button>
+                <div className={`${props.stateTheme.modal__wrapper} modal__wrapper`} onClick={closeModal}></div>
+                <div className={`${props.stateTheme.modal__window} modal__window`}>
+                    <button className={`${props.stateTheme['modal__button-cancel']} modal__button-cancel`} onClick={closeModal}>&#215;</button>
                     <div className='modal__header'>
-                        <div className='modal__title'><div className={`type__${props.class} modal__type`}>{props.class.slice(0, 1)}</div>{props.name}</div>
+                        <div className={`${props.stateTheme.modal__title} modal__title`}><div className={`${ItemStyles[`type__${props.class}`]} modal__type`}>{props.class.slice(0, 1)}</div>{props.name}</div>
 
                     </div>
-                    <div className='modal__description'>{props.description ? props.description : "Невдовзі буде доданий короткий опис"}</div>
+                    <div className={`${props.stateTheme.modal__description} modal__description`}>{props.description ? props.description : "Невдовзі буде доданий короткий опис"}</div>
                     <div className='modal__code'>
-                        <div className='modal__code-header'>
-                            {stateBtn ? <div className='modal__code-header-btn'
+                        <div className={`${props.stateTheme['modal__code-header']} modal__code-header`}>
+                            {stateBtn ? <div className={`${props.stateTheme['modal__code-header-btn']} modal__code-header-btn`}
                                 onClick={selectCopyFunction}>
                                 <CopyIcon />
                                 <span className='modal__code-span'>Copy code</span>

@@ -3,19 +3,63 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Search from './components/Search';
 import SearchCard from './components/SaerchCard';
-import './App.css';
 import ModalWindow from "./components/ModalWindow";
 import React, { useEffect, useState, useRef } from 'react';
 import ReactDOM from 'react-dom'
 import json from './data.json'
+import Preloader from './components/UI/Preloader';
+import ButtonScrollUp from './components/UI/ButtonScrollUp';
 
-
+import AppStyles from './App.module.css'
+import ThemeDark from './components/Helpers/ThemeDark.module.css'
+import ThemeLight from './components/Helpers/ThemeLight.module.css'
 
 function App() {
 
+  // state Preloader
+  const [statePreloader, setStatePreloader] = useState(false)
+  // Preloader function
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setStatePreloader(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+  // state Theme
+  const [stateTheme, setStateTheme] = useState(ThemeDark)
+
+  const toggleTheme = () => {
+    if (stateTheme == ThemeDark) {
+      setStateTheme(ThemeLight);
+      localStorage.setItem('theme', 'light');
+    } else {
+      setStateTheme(ThemeDark);
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme) {
+      setStateTheme(savedTheme == 'light' ? ThemeLight : ThemeDark)
+    }
+  }, [])
+
+  // state showCardProperties
+  const [stateShowProperties, setStateShowProperties] = useState(true)
+  const toggleCardProperties = () => {
+    if (stateShowProperties) {
+      setStateShowProperties(false)
+    }
+    else {
+      setStateShowProperties(true)
+    }
+  }
   // a function that calculates the size of cards
-  const wrappertRef = useRef(null);
+  const wrappertRef = useRef();
   const resizeElement = (element) => {
+
     if (!wrappertRef.current) {
       return;
     }
@@ -29,19 +73,31 @@ function App() {
       element.style.gridRowEnd = `span ${spanValue}`
     }
   }
+  const root = document.getElementById('root')
 
   const resizeElements = () => Array.from(wrappertRef.current.children).forEach(child => resizeElement(child))
 
+
   useEffect(() => {
-    resizeElements();
-  }, [resizeElements])
+    if (root.querySelector('.app__wrapper')) {
+      resizeElements();
+    }
+  }, [resizeElements, statePreloader, stateShowProperties])
 
   // state app
   const [initialState, setInitState] = useState(json)
+
   const onGoHomePage = (e) => {
-    setSearchValue('')
-    setInitState(json)
+    const input = document.querySelector('.Search_search__input__BzzQu');
+    input.value = '';
+    if (input.className !== '.Search_search__input__BzzQu') {
+      input.classList.remove("Search_search__input-invalid__SV2Ns")
+    }
+    setSearchValue('');
+    setInitState(json);
   }
+
+
   // state modal window
   const [showModal, setShowModal] = useState(false);
   const [dataModal, setDataModal] = useState({
@@ -82,41 +138,57 @@ function App() {
   }
 
 
+
+
   const portalElement = document.getElementById('overlays')
   return (
-    <div className='app__wrapper'>
-      <Header onGoHomePage={onGoHomePage} />
-      <Search
-        props={json}
-        onFilteredMethod={onFilteredMethod} />
-      <div className='app' ref={wrappertRef}>
-        {searchValue !== '' ?
-          searchValue.map(arr => (
-            <SearchCard
-              props={arr}
-              key={Math.random()}
-              onOpenModal={onOpenModal}
-            />
-          )) :
-          initialState.map(arr => (
-            <Card
-              key={arr.length}
-              props={arr}
-              onOpenModal={onOpenModal}
-            />))
-        }
+    <React.Fragment>
+      {statePreloader ? <div className={`${stateTheme.app} ${AppStyles.app__wrapper} app__wrapper`}>
+        <Header
+          onGoHomePage={onGoHomePage}
+          stateTheme={stateTheme}
+        />
+        <Search
+          stateTheme={stateTheme}
+          props={json}
+          onFilteredMethod={onFilteredMethod}
+          ontoggleTheme={toggleTheme}
+        />
 
-      </div>
-      <Footer />
-      {ReactDOM.createPortal(<ModalWindow
-        state={showModal}
-        name={dataModal.name}
-        class={dataModal.class}
-        code={dataModal.code}
-        description={dataModal.description}
-        onCloseModal={onCloseModal} />, portalElement)}
-    </div>
-
+        <div className={`${AppStyles.app}`} ref={wrappertRef}>
+          {searchValue !== '' ?
+            searchValue.map(arr => (
+              <SearchCard
+                stateTheme={stateTheme}
+                props={arr}
+                key={arr.lenght}
+                onOpenModal={onOpenModal}
+              />
+            )) :
+            initialState.map(arr => (
+              <Card
+                stateTheme={stateTheme}
+                showProperties={toggleCardProperties}
+                key={arr.lenght}
+                props={arr}
+                onOpenModal={onOpenModal}
+              />))
+          }
+          <ButtonScrollUp />
+        </div>
+        <Footer stateTheme={stateTheme} />
+        {ReactDOM.createPortal(<ModalWindow
+          stateTheme={stateTheme}
+          state={showModal}
+          name={dataModal.name}
+          class={dataModal.class}
+          code={dataModal.code}
+          description={dataModal.description}
+          onCloseModal={onCloseModal} />
+          , portalElement)}
+      </div> : <Preloader stateTheme={stateTheme} />
+      }
+    </React.Fragment >
   )
 }
 

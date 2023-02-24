@@ -1,8 +1,9 @@
-import './Footer.css';
+import FooterStyles from './Footer.module.css'
 
-const Footer = () => {
-    return <div className='footer'>
-        <span className='footer__span'>Created by <a href='https://www.linkedin.com/in/ivan-mykhalchenko-a73b77206/'>Ivan Mykhalchenko</a></span>
+
+const Footer = (props) => {
+    return <div className={`${FooterStyles.footer} ${props.stateTheme.footer}`}>
+        <span className={`${FooterStyles.footer__span} ${props.stateTheme.footer__span}`}>Created by <a href='https://www.linkedin.com/in/ivan-mykhalchenko-a73b77206/'>Ivan Mykhalchenko</a></span>
     </div>
 }
 

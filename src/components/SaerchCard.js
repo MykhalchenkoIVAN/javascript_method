@@ -5,15 +5,14 @@ import Item from "./Item";
 const SearchCard = (props) => {
     const onModalLisener = (e) => {
         props.onOpenModal(e)
-        props.onOpenOverlay(true)
     }
-
     return (
 
         < div className={styles.card}>
             <h2 className={styles.card__title}>{props.props.type}</h2>
-            <div className={styles.card__content}>
+            <div className={`${styles.card__content} ${props.stateTheme.card__bg}`}>
                 <Item key={Math.random()}
+                    stateTheme={props.stateTheme}
                     name={props.props.name}
                     class={props.props.class}
                     notice={props.props.notice}
