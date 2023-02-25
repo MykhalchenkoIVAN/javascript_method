@@ -1,8 +1,8 @@
 [
     {
       "titleBlock": "Number()",
-      "properties": [
-        {
+      "id_card":"01",
+      "properties": [{
           "name": ".POSITIVE_INFINITY",
           "class": "number",
           "description": "Number.POSITIVE_INFINITY - це спеціальне число, яке означає \"нескінченність\" у JavaScript.\n                 Це значення використовується, коли потрібно визначити, що число є дуже великим або бескінечним.",
@@ -46,8 +46,7 @@
         }
       ],
       "methods": {
-        "basicMethods": [
-          {
+        "basicMethods": [{
             "name": ".toExponential()",
             "class": "string",
             "description": "Number.toExponential() в JavaScript використовується для перетворення числового значення в формат експоненціального представлення.",
@@ -119,6 +118,7 @@
     },
     {
       "titleBlock": "String()",
+      "id_card":"02",
       "properties": [
         {
           "name": ".length",
@@ -377,8 +377,10 @@
         "data3": { "data1title": "", "data4": [] },
         "data4": { "data1title": "", "data5": [] }
       }
-    },{
+    },
+    {
       "titleBlock": "EventTarget",
+      "id_card":"03",
       "properties": [],
       "methods": {
         "basicMethods": [
@@ -415,6 +417,7 @@
     },
     {
       "titleBlock": "Array()",
+      "id_card":"04",
       "properties": [
         {
           "name": ".length",
@@ -692,6 +695,7 @@
     },
     {
       "titleBlock": "JSON",
+      "id_card":"05",
       "properties": [],
       "methods": {
         "basicMethods": [
@@ -720,6 +724,7 @@
     },
     {
       "titleBlock": "Promise()",
+      "id_card":"06",
       "properties": [],
       "methods": {
         "basicMethods": [{
@@ -799,6 +804,7 @@
     },
     {
       "titleBlock": "Error()",
+      "id_card":"07",
       "properties": [
         {
           "name": ".name",
@@ -825,6 +831,7 @@
     },
     {
       "titleBlock": "Symbol",
+      "id_card":"08",
       "properties": [
         {
           "name": ".iterator",
@@ -873,6 +880,7 @@
     },
     {
       "titleBlock": "window",
+      "id_card":"09",
       "properties": [],
       "methods": {
         "basicMethods": [
@@ -906,6 +914,7 @@
     },
     {
       "titleBlock": "Map()",
+      "id_card":"10",
       "properties": [
         {
           "name": ".size",
@@ -997,6 +1006,7 @@
     },
     {
       "titleBlock": "Set()",
+      "id_card":"11",
       "properties": [
         {
           "name": ".size()",
@@ -1045,6 +1055,7 @@
     },
     {
       "titleBlock": "Event()",
+      "id_card":"12",
       "properties": [
         {
           "name": ".bubbles",
@@ -1162,6 +1173,7 @@
     },
     {
       "titleBlock": "screen",
+      "id_card":"13",
       "properties": [
         {
           "name": ".availTop",
@@ -1255,6 +1267,7 @@
     },
     {
       "titleBlock": "ChildNode()",
+      "id_card":"14",
       "properties": [
 
       ],
@@ -1275,6 +1288,7 @@
     },
     {
       "titleBlock": "ParentNode()",
+      "id_card":"15",
       "properties": [
         {
           "name": ".childElementCount",
@@ -1319,6 +1333,7 @@
     },
     {
       "titleBlock": "NonDocumentTypeChildNode()",
+      "id_card":"16",
       "properties": [
         {
           "name": ".nextElementSibling",
@@ -1345,8 +1360,5 @@
         "data4": { "data1title": "", "data5": [] }
       }
     }
-    
-    
-    
   ]
   

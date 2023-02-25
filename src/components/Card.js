@@ -1,134 +1,91 @@
-import { useState } from 'react';
 import styles from './Card.module.css'
-import Item from "./Item";
-
-
+import SectionCard from './SectionCard'
 
 const Card = (props) => {
-    const [stateProperties, setStateProperties] = useState(false)
-    const onModalLisener = (e) => {
-        props.onOpenModal(e)
-    }
-    const hideProperties = (e) => {
-        props.showProperties()
-
-        const children = e.target.parentNode.children;
-        const targetH3 = e.target.parentNode
-        const h3 = e.target
-        const divContent = h3.parentNode.parentNode
-        divContent.classList.toggle(styles.helpers)
-        h3.classList.toggle(styles.bg_svg)
-        for (let i = 0; children.length > i; i++) {
-            if (children.item(i).tagName != 'H3') {
-                const item = children.item(i)
-                item.classList.toggle(styles.item__hidden)
-                item.classList.toggle('Item_item__j6Xn7')
-                targetH3.classList.toggle(styles.add)
-            }
-        }
-
-    }
+    const idSection1 = props.props.id_card + props.props.properties.length + props.props.titleBlock
+    const idSection2 = props.props.id_card + props.props.methods.basicMethods.length + props.props.titleBlock
+    const idSection3 = props.props.id_card + props.props.methods.data1.data2.length + props.props.titleBlock
+    const idSection4 = props.props.id_card + props.props.methods.data2.data3.length + props.props.titleBlock + 1
+    const idSection5 = props.props.id_card + props.props.methods.data3.data4.length + props.props.titleBlock
+    const idSection6 = props.props.id_card + props.props.methods.data4.data5.length + props.props.titleBlock
     return (
         < div className={styles.card} >
             <h2 className={styles.card__title}>{props.props.titleBlock}</h2>
             <div className={styles.card__content}>
 
-                {props.props.properties.length > 0 && <div className={`${styles.properties} ${props.stateTheme.card__bg}`}>
-                    <h3 className={`${styles.properties__title} ${props.stateTheme.properties__title}`} onClick={hideProperties}>PROPERTIES</h3>
-                    {props.props.properties.map(item => (
-                        < Item
-                            stateTheme={props.stateTheme}
-                            key={item.name}
-                            name={item.name}
-                            class={item.class}
-                            notice={item.notice}
-                            code={item.code}
-                            onModalLisener={onModalLisener}
-                            description={item.description}
-                        />
-                    ))}
+                {props.props.properties.length > 0 &&
+                    <SectionCard
+                        key={idSection1}
+                        stateTheme={props.stateTheme}
+                        properties={props.props.properties}
+                        onOpenModal={props.onOpenModal}
+                        title={props.props.properties}
+                        showProperties={props.showProperties}
+                        h3={'PROPERTIES'}
+                        stateShowProperties={props.stateShowProperties}
+                    >
+                    </SectionCard>}
 
-                </div>}
-                {props.props.methods.basicMethods.length > 0 && <div className={`${styles.properties} ${props.stateTheme.card__bg}`}>
-                    <h3 className={`${styles.methods__title} ${props.stateTheme.properties__title}`} onClick={hideProperties}>METHODS</h3>
-                    {props.props.methods.basicMethods.map(item => (
-                        < Item
-                            stateTheme={props.stateTheme}
-                            key={item.name}
-                            name={item.name}
-                            class={item.class}
-                            notice={item.notice}
-                            code={item.code}
-                            description={item.description}
-                            onModalLisener={onModalLisener}
-                        />
-                    ))}
-                </div>}
+                {props.props.methods.basicMethods.length > 0 &&
+                    <SectionCard
+                        key={idSection2}
+                        stateTheme={props.stateTheme}
+                        properties={props.props.methods.basicMethods}
+                        onOpenModal={props.onOpenModal}
+                        showProperties={props.showProperties}
+                        h3={'METHOD'}
+                        stateShowProperties={props.stateShowProperties}
+                    >
+                    </SectionCard>}
 
+                {props.props.methods.data1.data2.length > 0 &&
+                    <SectionCard
+                        key={idSection3}
+                        stateTheme={props.stateTheme}
+                        properties={props.props.methods.data1.data2}
+                        onOpenModal={props.onOpenModal}
+                        showProperties={props.showProperties}
+                        h3={props.props.methods.data1.data1title}
+                        stateShowProperties={props.stateShowProperties}
+                    >
+                    </SectionCard>}
 
-                {props.props.methods.data1.data2.length > 0 && <div className={`${styles.properties} ${props.stateTheme.card__bg}`}>
-                    <h3 className={`${styles.methods__title} ${props.stateTheme.properties__title}`} onClick={hideProperties}>{props.props.methods.data1.data1title}</h3>
-                    {props.props.methods.data1.data2.map(item => (
-                        < Item
-                            stateTheme={props.stateTheme}
-                            key={item.name}
-                            name={item.name}
-                            class={item.class}
-                            notice={item.notice}
-                            code={item.code}
-                            description={item.description}
-                            onModalLisener={onModalLisener}
-                        />
-                    ))}
-                </div>}
+                {props.props.methods.data2.data3.length > 0 &&
+                    <SectionCard
+                        key={idSection4}
+                        stateTheme={props.stateTheme}
+                        properties={props.props.methods.data2.data3}
+                        onOpenModal={props.onOpenModal}
+                        showProperties={props.showProperties}
+                        h3={props.props.methods.data2.data1title}
+                        stateShowProperties={props.stateShowProperties}
+                    >
+                    </SectionCard>}
 
-                {props.props.methods.data2.data3.length > 0 && <div className={`${styles.properties} ${props.stateTheme.card__bg}`}>
-                    <h3 className={`${styles.methods__title} ${props.stateTheme.properties__title}`} onClick={hideProperties}>{props.props.methods.data2.data1title}</h3>
-                    {props.props.methods.data2.data3.map(item => (
-                        < Item
-                            stateTheme={props.stateTheme}
-                            key={item.name}
-                            name={item.name}
-                            class={item.class}
-                            notice={item.notice}
-                            code={item.code}
-                            description={item.description}
-                            onModalLisener={onModalLisener}
-                        />
-                    ))}
-                </div>}
+                {props.props.methods.data3.data4.length > 0 &&
+                    <SectionCard
+                        key={idSection5}
+                        stateTheme={props.stateTheme}
+                        properties={props.props.methods.data3.data4}
+                        onOpenModal={props.onOpenModal}
+                        showProperties={props.showProperties}
+                        h3={props.props.methods.data3.data1title}
+                        stateShowProperties={props.stateShowProperties}
+                    >
+                    </SectionCard>}
 
-                {props.props.methods.data3.data4.length > 0 && <div className={`${styles.properties} ${props.stateTheme.card__bg}`}>
-                    <h3 className={`${styles.methods__title} ${props.stateTheme.properties__title}`} onClick={hideProperties}>{props.props.methods.data3.data1title}</h3>
-                    {props.props.methods.data3.data4.map(item => (
-                        < Item
-                            stateTheme={props.stateTheme}
-                            key={item.name}
-                            name={item.name}
-                            class={item.class}
-                            notice={item.notice}
-                            code={item.code}
-                            description={item.description}
-                            onModalLisener={onModalLisener}
-                        />
-                    ))}
-                </div>}
+                {props.props.methods.data4.data5.length > 0 &&
+                    <SectionCard
+                        key={idSection6}
+                        stateTheme={props.stateTheme}
+                        properties={props.props.methods.data4.data5}
+                        onOpenModal={props.onOpenModal}
+                        showProperties={props.showProperties}
+                        h3={props.props.methods.data4.data1title}
+                        stateShowProperties={props.stateShowProperties}
+                    >
+                    </SectionCard>}
 
-                {props.props.methods.data4.data5.length > 0 && <div className={`${styles.properties} ${props.stateTheme.card__bg}`}>
-                    <h3 className={`${styles.methods__title} ${props.stateTheme.properties__title}`} onClick={hideProperties}>{props.props.methods.data4.data1title}</h3>
-                    {props.props.methods.data4.data5.map(item => (
-                        < Item
-                            stateTheme={props.stateTheme}
-                            key={item.name}
-                            name={item.name}
-                            class={item.class}
-                            notice={item.notice}
-                            code={item.code}
-                            description={item.description}
-                            onModalLisener={onModalLisener}
-                        />
-                    ))}
-                </div>}
             </div>
         </div >
 

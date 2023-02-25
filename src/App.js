@@ -9,7 +9,6 @@ import ReactDOM from 'react-dom'
 import json from './data.json'
 import Preloader from './components/UI/Preloader';
 import ButtonScrollUp from './components/UI/ButtonScrollUp';
-
 import AppStyles from './App.module.css'
 import ThemeDark from './components/Helpers/ThemeDark.module.css'
 import ThemeLight from './components/Helpers/ThemeLight.module.css'
@@ -47,14 +46,10 @@ function App() {
   }, [])
 
   // state showCardProperties
-  const [stateShowProperties, setStateShowProperties] = useState(true)
-  const toggleCardProperties = () => {
-    if (stateShowProperties) {
-      setStateShowProperties(false)
-    }
-    else {
-      setStateShowProperties(true)
-    }
+  const [sectionStates, satSectionStates] = useState(true);
+  const toggleCardProperties = (e) => {
+    satSectionStates(!sectionStates)
+    console.log(sectionStates);
   }
   // a function that calculates the size of cards
   const wrappertRef = useRef();
@@ -82,7 +77,7 @@ function App() {
     if (root.querySelector('.app__wrapper')) {
       resizeElements();
     }
-  }, [resizeElements, statePreloader, stateShowProperties])
+  }, [resizeElements, statePreloader,])
 
   // state app
   const [initialState, setInitState] = useState(json)
@@ -167,9 +162,10 @@ function App() {
             )) :
             initialState.map(arr => (
               <Card
+                initialState={initialState}
                 stateTheme={stateTheme}
                 showProperties={toggleCardProperties}
-                key={arr.lenght}
+                key={arr.id}
                 props={arr}
                 onOpenModal={onOpenModal}
               />))
