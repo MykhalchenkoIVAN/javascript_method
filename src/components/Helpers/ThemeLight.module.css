@@ -1,122 +1,130 @@
-.preloader{
-    background: #ada99680;  
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #c3c1b8); 
+.preloader {
+  background: #ada99680;
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  );
+  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #c3c1b8);
 }
 
-.app__wrapper{
-    background-color: #aed6f5 ;
+.app__wrapper {
+  background-color: #aed6f5;
 }
-.app{   
-    background: #ada99680;  
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #c3c1b8); 
-
+.app {
+  background: #ada99680;
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  );
+  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #c3c1b8);
 }
 /* Header */
-.header{
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+.header {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+.color__title {
+  color: #000000;
+}
+.color__title span {
+  color: rgb(8, 32, 225);
+}
 
-}
-.color__title{
-    color: #000000; 
-}
-.color__title span{
-    color: rgb(8, 32, 225);
-}
-
-.hnitem{
-    color: rgb(5, 20, 40);
+.hnitem {
+  color: rgb(5, 20, 40);
 }
 /* Card */
-.properties__title{
-    color: white;
-    background-color: #0069c8;
+.properties__title {
+  color: white;
+  background-color: #0069c8;
 }
-.properties__title:hover{
-    background-color:#2e2e34;
-    color:#b0a6a6;
+.properties__title:hover {
+  background-color: #2e2e34;
+  color: #b0a6a6;
 }
-.type__hover{
-    color:white;
+.type__hover {
+  color: white;
 }
-.item__text{
-    color:rgb(35, 35, 116);
+.item__text {
+  color: rgb(35, 35, 116);
 }
-.item__span{
-    color: rgb(159, 159, 162);
+.item__span {
+  color: rgb(159, 159, 162);
 }
-.item{
-    color: rgb(35, 35, 116);
+.item {
+  color: rgb(35, 35, 116);
 }
-.item:hover{
-    color: #0069c8;
-    background-color: #e5f3fe ;
+.item:hover {
+  color: #0069c8;
+  background-color: #e5f3fe;
 }
-.item:hover .type__hover{
-    color: rgb(255, 255, 255);
-    border: 0.01rem rgb(9, 0, 0) solid;
+.item:hover .type__hover {
+  color: rgb(255, 255, 255);
+  border: 0.01rem rgb(9, 0, 0) solid;
 }
 .item:hover .item__text {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 /* Search */
-.search__wrapper{
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-  
+.search__wrapper {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 }
-.search__input{
-    color: white;
-    background-color: #252526;
+.search__input {
+  color: white;
+  background-color: #252526;
 }
 /* Footer */
-.footer{
-    background-color: rgb(37, 37, 38);
+.footer {
+  background-color: rgb(37, 37, 38);
 }
-.footer__span{
-    color: rgb(187, 183, 180);
+.footer__span {
+  color: rgb(187, 183, 180);
 }
-.footer__span a{
-    color: rgb(143, 143, 181);   
+.footer__span a {
+  color: rgb(143, 143, 181);
 }
-.footer__span a:hover{
-    color: rgb(97, 97, 163);
+.footer__span a:hover {
+  color: rgb(97, 97, 163);
 }
 /* Modal Window */
-.modal__wrapper{
-    background-color:  #02233cce ;
+.modal__wrapper {
+  background-color: #02233cce;
 }
-.modal__window{
-    background-color: #ffffff;
-} 
-.modal__title{
-    color: rgb(1, 1, 1);
+.modal__window {
+  background-color: #ffffff;
 }
-.modal__button-cancel{
-    
+.modal__title {
+  color: rgb(1, 1, 1);
 }
-.modal__button-cancel:hover{
-    background-color: rgba(255, 0, 0, 0.515);
-    color: rgb(0, 0, 0);
+.modal__button-cancel {
 }
-.modal__code-header{
-    background-color:rgb(205, 205, 203);
+.modal__button-cancel:hover {
+  background-color: rgba(255, 0, 0, 0.515);
+  color: rgb(0, 0, 0);
 }
-.modal__code-header-btn{
-    color: rgba(0, 0, 0, 0.514);
-    fill: rgba(0, 0, 0, 0.514);    
+.modal__code-header {
+  background-color: rgb(205, 205, 203);
 }
-.modal__code-header-btn:hover{
-    fill:rgb(0, 0, 0);
-    color:rgb(0, 0, 0);  
+.modal__code-header-btn {
+  color: rgba(0, 0, 0, 0.514);
+  fill: rgba(0, 0, 0, 0.514);
 }
-.modal__description{
-    color: rgb(3, 3, 3);
+.modal__code-header-btn:hover {
+  fill: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+.modal__description {
+  color: rgb(3, 3, 3);
 }
 /* btn toggle Dark Light mode */
-.toggle__theme-btn-bg{
-    background-color: #0067c89f;
-    border: 0.1rem #0067c89f solid;
+.toggle__theme-btn-bg {
+  background-color: #0067c89f;
+  border: 0.1rem #0067c89f solid;
 }

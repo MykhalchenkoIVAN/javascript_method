@@ -1,31 +1,31 @@
 @import url('./Helpers/VariableCss.css');
-.item{
-    font-size: 1.6rem;
-    line-height: 1.7rem;
-    display: flex;
-    width: 100%;
-    height: 2rem;
-    margin-bottom: 0.3rem;
-    margin-top:0.4rem;
+.item {
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+  display: flex;
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.4rem;
 }
-.item:hover{
-    cursor: pointer;
+.item:hover {
+  cursor: pointer;
 }
-.item:hover .type__hover{
-    transform : scale(1.4);
-    font-size: 2rem;
-    transition: all 0.2s ease-in-out;
+.item:hover .type__hover {
+  transform: scale(1.4);
+  font-size: 2rem;
+  transition: all 0.2s ease-in-out;
 }
-.item__text{
-    font-size: 1.6rem;
-    padding-left: 0.5rem;
-    font-weight: 600;
+.item__text {
+  font-size: 1.6rem;
+  padding-left: 0.5rem;
+  font-weight: 600;
 }
 
-.modalwindow{
-    height: 100px;
-    width: 100px;
-    background-color: var(--black);
+.modalwindow {
+  height: 100px;
+  width: 100px;
+  background-color: var(--black);
 }
 .type__object,
 .type__string,
@@ -38,50 +38,50 @@
 .type__function,
 .type__undefined,
 .type__promise,
-.type__map{
-    text-transform: uppercase;
-    width: 2rem;
-    border-radius: 0.2rem;
-    margin-left: 1rem;
-    display: flex;
-    justify-content: center;
+.type__map {
+  text-transform: uppercase;
+  width: 2rem;
+  border-radius: 0.2rem;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
 }
-.type__object{
-    background-color: var(--object);
+.type__object {
+  background-color: var(--object);
 }
-.type__string{
-    background-color: var(--string);
+.type__string {
+  background-color: var(--string);
 }
-.type__number{
-    color: var(--number-text);
-    background-color: var(--number);
+.type__number {
+  color: var(--number-text);
+  background-color: var(--number);
 }
-.type__nan{
-    color: var(--nan-texts);
-    background-color: var(--nan);
+.type__nan {
+  color: var(--nan-texts);
+  background-color: var(--nan);
 }
-.type__boolean{
-    background-color: var(--boolean);
+.type__boolean {
+  background-color: var(--boolean);
 }
-.type__array{
-    background-color: var(--array);
+.type__array {
+  background-color: var(--array);
 }
 
-.type__date{
-    background-color: var(--date); 
+.type__date {
+  background-color: var(--date);
 }
-.type__regular-expresion{
-    background-color: var(--regular-expresion); 
+.type__regular-expresion {
+  background-color: var(--regular-expresion);
 }
-.type__function{
-    background-color: var(--function);
+.type__function {
+  background-color: var(--function);
 }
-.type__undefined{
-    background-color: var(--undefined);
+.type__undefined {
+  background-color: var(--undefined);
 }
-.type__promise{
-    background-color: var(--promise);
+.type__promise {
+  background-color: var(--promise);
 }
-.type__map{
-    background-color: var(--map); 
+.type__map {
+  background-color: var(--map);
 }

@@ -1,5 +1,5 @@
 @import url('./components/Helpers/VariableCss.css');
-.app__wrapper{
+.app__wrapper {
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -16,7 +16,9 @@
     var(--content)
     var(--flap);
 
-  grid-template-rows: 1.6rem minmax(min-content, max-content) minmax(min-content, max-content)  minmax(min-content, max-content) minmax(min-content, max-content) 1.6rem;  
+  grid-template-rows:
+    1.6rem minmax(min-content, max-content) minmax(min-content, max-content)
+    minmax(min-content, max-content) minmax(min-content, max-content) 1.6rem;
   z-index: 1;
 }
 
@@ -29,26 +31,22 @@
   grid-template-columns: 100%;
   gap: 1.6rem;
   grid-auto-rows: 1.6rem;
-
 }
 
-@media(min-width: 640px){
-  .app{
+@media (min-width: 640px) {
+  .app {
     grid-template-columns: 1fr 1fr;
   }
-
 }
 
-@media(min-width: 1098px){
-  .app{
+@media (min-width: 1098px) {
+  .app {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
 }
 
-@media(max-width: 1000px){
-  .app__wrapper{
+@media (max-width: 1000px) {
+  .app__wrapper {
     --flap: minmax(0.3rem, 1fr);
   }
-
 }

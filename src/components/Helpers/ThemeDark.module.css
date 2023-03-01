@@ -1,116 +1,119 @@
-.preloader{
-    background-color: #252526; 
+.preloader {
+  background-color: #252526;
 }
-.app__wrapper{
-    background-color: #252526 ;
+.app__wrapper {
+  background-color: #252526;
 }
-.app{
-    background-color: #1e1e1ed5;
-    transition: all .2s ease-in;
+.app {
+  background-color: #1e1e1ed5;
 }
 /* Header */
-.header{
-    background-color: #1e1e1e;
-    transition: all .2s ease-in;
+.header {
+  background-color: #1e1e1e;
+  transition: all 0.2s ease-in;
 }
-.color__title{
-    color: #FFFFFF; 
+.color__title {
+  color: #ffffff;
 }
-.color__title span{
-    color: #f7df1e;
+.color__title span {
+  color: #f7df1e;
 }
-.hnitem{
-    color: antiquewhite;
+.hnitem {
+  color: antiquewhite;
 }
 /* Card */
-.card__bg{
-    background-color: #252526; 
-    transition: all .2s ease-in;
+.card__bg {
+  background-color: #252526;
+  transition: all 0.2s ease-in;
 }
-.properties__title{
-    color: rgb(211, 182, 182);
-    background-color: #1e1e1ed5;
+.properties__title {
+  color: rgb(211, 182, 182);
+  background-color: #1e1e1ed5;
 }
-.properties__title:hover{
-    background-color:#2e2e34;
-    color:#b0a6a6;
+.properties__title svg {
+  fill: rgb(211, 182, 182);
 }
-.type__hover{
-    color:white;
+.properties__title:hover {
+  background-color: #2e2e34;
+  color: #b0a6a6;
 }
-.item__span{
-    color: rgba(96, 96, 93, 0.81);
+.type__hover {
+  color: white;
 }
-.item{
-    color: #dcdc8b;
+.item__span {
+  color: rgba(96, 96, 93, 0.81);
 }
-.item:hover{
-    color: white;
-    background-color: rgba(245, 245, 234, 0.427);
+.item {
+  color: #dcdc8b;
 }
-.item:hover .type__hover{
-    color: rgb(255, 255, 255);
-    border: 0.01rem rgba(245, 245, 234, 0.427) solid;
+.item:hover {
+  color: white;
+  background-color: rgba(245, 245, 234, 0.427);
+}
+.item:hover .type__hover {
+  color: rgb(255, 255, 255);
+  border: 0.01rem rgba(245, 245, 234, 0.427) solid;
 }
 .item:hover .item__text {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
+
 /* Search */
-.search__wrapper{
-    background-color: #1e1e1e;
-    transition: all .2s ease-in;
+.search__wrapper {
+  background-color: #1e1e1e;
+  transition: all 0.2s ease-in;
 }
-.search__input{
-    color: white;
-    background-color: #252526;
+.search__input {
+  color: white;
+  background-color: #252526;
 }
 /* Footer */
-.footer{
-    background-color: #252526;
+.footer {
+  background-color: #252526;
 }
-.footer__span{
-    color:rgb(68, 72, 75);
+.footer__span {
+  color: rgb(68, 72, 75);
 }
-.footer__span a{
-    color: rgba(112, 112, 74, 0.864);   
+.footer__span a {
+  color: rgba(112, 112, 74, 0.864);
 }
-.footer__span a:hover{
-    color: rgb(158, 158, 92);
+.footer__span a:hover {
+  color: rgb(158, 158, 92);
 }
 /* Modal Window */
-.modal__wrapper{
-    background-color:rgba(0, 0, 0, 0.714);
+.modal__wrapper {
+  background-color: rgba(0, 0, 0, 0.714);
 }
-.modal__window{
-    background-color: #252526;
-} 
-.modal__title{
-    color: #dcdc8b;
+.modal__window {
+  background-color: #252526;
 }
-.modal__button-cancel{
-    color: rgba(255, 0, 0, 0.361);
+.modal__title {
+  color: #dcdc8b;
 }
-.modal__button-cancel:hover{
-    background-color: rgba(255, 0, 0, 0.361);
-    color: #ffffff;
+.modal__button-cancel {
+  color: rgba(255, 0, 0, 0.361);
 }
-.modal__code-header{
-    background-color: #323234;
+.modal__button-cancel:hover {
+  background-color: rgba(255, 0, 0, 0.361);
+  color: #ffffff;
 }
-.modal__code-header-btn{
-    fill:rgba(255, 255, 255, 0.515);
-    color:rgba(255, 255, 255, 0.515);
+.modal__code-header {
+  background-color: #323234;
 }
-.modal__code-header-btn:hover{
-    fill: #ffffff;
-    color: #ffffff;
+.modal__code-header-btn {
+  fill: rgba(255, 255, 255, 0.515);
+  color: rgba(255, 255, 255, 0.515);
 }
-.modal__description{
-    color: #ffffff85;
+.modal__code-header-btn:hover {
+  fill: #ffffff;
+  color: #ffffff;
+}
+.modal__description {
+  color: #ffffff85;
 }
 /* btn toggle Dark Light mode */
-.toggle__theme-btn-bg{
-    background-color: rgba(113, 100, 100, 0.515);
-    border: 0.1rem rgba(235, 193, 193, 0.16) solid;
-    box-shadow: 0 0 0.9rem 0.9rem rgba(13, 226, 13, 0.1) inset;
+.toggle__theme-btn-bg {
+  background-color: rgba(113, 100, 100, 0.515);
+  border: 0.1rem rgba(235, 193, 193, 0.16) solid;
+  box-shadow: 0 0 0.9rem 0.9rem rgba(13, 226, 13, 0.1) inset;
 }

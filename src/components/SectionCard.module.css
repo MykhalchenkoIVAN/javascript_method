@@ -1,30 +1,24 @@
-.properties, .method {
+.properties {
+}
+.properties div:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0.4rem;
+}
 
+.properties__title {
+  position: relative;
+  text-align: start;
 }
-.properties div:last-of-type, .method div:last-of-type{
-    margin-bottom: 0;
-    padding-bottom: 0.4rem;
+.properties__title {
+  margin: 0;
+  font-size: 1.8rem;
+  padding-left: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.2s;
 }
-
-
-.properties__title, .methods__title,.card__title{
-    position: relative;
-    text-align: start;
-}
-.properties__title, .methods__title{
-    margin: 0;
-    font-size: 1.8rem;
-    padding-left: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    background-image: url('../svg/arrowup.svg');
-    background-position: right center;
-    background-repeat: no-repeat;
-    transition: 0.2s;
-}
-.bg_svg{
-    background-image: url('../svg/arrowdown.svg');
-}
-.properties__title svg, .methods__title svg{
- padding-right: 1rem;
+.properties__title svg {
+  width: 2rem;
+  height: 2rem;
+  padding-right: 0.5rem;
 }
